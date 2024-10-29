@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/shopping_list_movie_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="56dp"
+                android:layout_height="72dp"
+                android:src="@drawable/card_img_test">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/shopping_list_movie_title_txt"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/shopping_list_movie_img"
+                app:layout_constraintTop_toTopOf="@+id/shopping_list_movie_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/shopping_list_movie_added_date_txt"
+                app:layout_constraintStart_toStartOf="@+id/shopping_list_movie_title_txt"
+                app:layout_constraintTop_toBottomOf="@+id/shopping_list_movie_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicionado em 12/06/2024"
+                android:textColor="#A1A1A1"
+                android:textSize="12dp">
+
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/shopping_list_movie_delete_btn"
+                app:layout_constraintBottom_toBottomOf="@+id/shopping_list_movie_img"
+                app:layout_constraintStart_toEndOf="@+id/shopping_list_movie_title_txt"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/trash_can" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/shopping_list_movie_remove_amount_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/remove_circle"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/shopping_list_movie_amount_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="36dp"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="14dp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageButton
+            android:id="@+id/shopping_list_movie_add_amount_btn"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:backgroundTint="@color/white"
+            android:foregroundGravity="left"
+            android:src="@drawable/add_circle"
+            android:layout_gravity="center_vertical"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="SUBTOTAL"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/shopping_list_movie_price_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 29,90"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_subtotal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginVertical="21dp">
+
+        </View>
+
+
+
+    
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

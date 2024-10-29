@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_background">#2F2E41</color>
+    <color name="nav_bar_color">#1D1D2C</color>background: #009EDD;
+    <color name="button_primary_color">#FF009EDD</color>
+    <color name="button_selected_color">#FF039B00</color>
+
+
+</resources>

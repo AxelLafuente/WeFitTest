@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    android:layout_marginVertical="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="center">
+
+
+        <ImageView
+            android:id="@+id/movie_card_img"
+            android:layout_width="188dp"
+            android:layout_height="147dp"
+            android:src="@drawable/card_img_test"
+            android:layout_gravity="center"/>
+
+        <TextView
+        android:id="@+id/movie_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Viuva negra"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/movie_card_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="R$ 29,90"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/movie_card_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/primary_button"
+            android:text="ADICIONAR AO CARRINHO"
+            android:textSize="12sp"
+            app:icon="@drawable/shopping_cart">
+
+        </Button>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

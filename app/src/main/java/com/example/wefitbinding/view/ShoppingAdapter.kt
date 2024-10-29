@@ -1,20 +1,17 @@
 package com.example.wefitbinding.view
 
-import android.graphics.Movie
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.os.persistableBundleOf
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.wefitbinding.api.domain.Movies
-import com.example.wefitbinding.api.domain.MoviesMap
 import com.example.wefitbinding.api.domain.MoviesMap.map
 import com.example.wefitbinding.api.domain.MoviesMap.moviesSingleton
 import com.example.wefitbinding.api.domain.MoviesMap.totalShoppingList
 import com.example.wefitbinding.databinding.ShoppingCartItemBinding
 
-class ShoppingAdapter()
+class ShoppingAdapter
     : RecyclerView.Adapter<ShoppingAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

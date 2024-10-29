@@ -1,8 +1,11 @@
 package com.example.wefitbinding
 
 import android.os.Bundle
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.transition.Visibility
 import com.example.wefitbinding.api.domain.MoviesMap
 import com.example.wefitbinding.databinding.ActivityMainBinding
 import com.example.wefitbinding.view.MoviesAdapter
@@ -40,6 +43,12 @@ class MainActivity : AppCompatActivity() {
 
         title.let {
             binding.titleFragmentText.text = title
+        }
+        if (title == getString(R.string.shopping_fragment_title_text)){
+            binding.finishOrderLayout.visibility = VISIBLE
+        }else{
+            binding.finishOrderLayout.visibility = GONE
+
         }
 
 

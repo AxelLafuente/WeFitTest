@@ -1,13 +1,13 @@
 package com.example.wefitbinding
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wefitbinding.api.domain.MoviesMap
+import com.example.wefitbinding.api.domain.MoviesMap.map
 import com.example.wefitbinding.databinding.FragmentShoppingCartBinding
 import com.example.wefitbinding.view.ShoppingAdapter
 
@@ -25,23 +25,37 @@ class ShoppingCartFragment : Fragment() {
         val view  = shoppingBinding.root
 
 
+
         Thread(Runnable {
-            loadMovies()
+            loadSHoppingCart()
         }).start()
 
 
         return view
     }
 
-    private fun loadMovies() {
+    private fun loadSHoppingCart() {
         val rvShoppingCartMovies = binding!!.rvShoppingCartMovies
         val LayoutManager = LinearLayoutManager(context)
+        if(isEmpyShopping()){
         runOnUiThread {
             rvShoppingCartMovies.layoutManager = LayoutManager
             rvShoppingCartMovies.adapter = ShoppingAdapter()
-            binding!!.shoppingListMovieSubTotal.text = String.format("%.2f", MoviesMap.totalShoppingList)
+          }
+
         }
+    }}
 
+    private fun isEmpyShopping(): Boolean {
+        var count = 0
+        for (item in map){
+            if (item == 0){
+                count++
+            }
+        }
+        if (count== map.size){
+            return false
+        }else {
+            return true
+        }
     }
-
-}

@@ -61,11 +61,6 @@ class HomeFragment : Fragment() {
 
 }
 
-/*
-
-
-
- */
 fun Fragment?.runOnUiThread(action: () -> Unit) {
     this ?: return
     if (!isAdded) return // Fragment not attached to an Activity
